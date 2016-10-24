@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication;
+package com.example.administrator.myapplication.act;
 
 import android.app.Activity;
 import android.graphics.Color;
@@ -7,6 +7,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.TextView;
+
+import com.example.administrator.myapplication.Contact;
+import com.example.administrator.myapplication.R;
 
 public class DetailsActivity extends Activity {
 

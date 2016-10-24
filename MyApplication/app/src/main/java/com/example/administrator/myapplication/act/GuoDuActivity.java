@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication;
+package com.example.administrator.myapplication.act;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -8,6 +8,11 @@ import android.support.v4.util.Pair;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.view.View;
+
+import com.example.administrator.myapplication.Contact;
+import com.example.administrator.myapplication.DataManager;
+import com.example.administrator.myapplication.R;
+import com.example.administrator.myapplication.RecyclerClickListener;
 
 public class GuoDuActivity extends BaseBackActivity {
 

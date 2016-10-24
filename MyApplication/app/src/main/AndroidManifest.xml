@@ -7,8 +7,7 @@
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DesignDemo"
-        >
+        android:theme="@style/Theme.DesignDemo">
         <activity
             android:name=".act.MainActivity"
             android:label="@string/app_name">
@@ -19,12 +18,10 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity
-            android:name=".act.GuoDuActivity"
-             />
-        <activity
-            android:name=".act.DetailsActivity" />
-        <activity android:name=".act.TabelLayoutActivity"></activity>
+        <activity android:name=".act.GuoDuActivity" />
+        <activity android:name=".act.DetailsActivity" />
+        <activity android:name=".act.TabelLayoutActivity" />
+        <activity android:name=".act.CollapsingToolbarActivity"></activity>
     </application>
 
 </manifest>

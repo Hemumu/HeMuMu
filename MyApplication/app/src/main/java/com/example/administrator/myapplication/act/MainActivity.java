@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication;
+package com.example.administrator.myapplication.act;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -11,6 +11,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.MenuItem;
+
+import com.example.administrator.myapplication.R;
 
 public class MainActivity extends AppCompatActivity {
 
@@ -32,15 +34,9 @@ public class MainActivity extends AppCompatActivity {
         Toolbar toolbar = (Toolbar) findViewById(R.id.id_toolbar);
 
         toolbar.setLogo(R.mipmap.ic_launcher);
-        // Title
         toolbar.setTitle("App Title");
-        // Sub Title
         toolbar.setSubtitle("Sub title");
-        //Navigation Icon
         toolbar.setNavigationIcon(R.drawable.test);
-
-        setSupportActionBar(toolbar);
-
 
         setSupportActionBar(toolbar);
 
@@ -63,9 +59,24 @@ public class MainActivity extends AppCompatActivity {
                         menuItem.setChecked(true);
                         mDrawerLayout.closeDrawers();
                         mPreMenuItem = menuItem;
-                        Intent intent = new Intent(MainActivity.this,GuoDuActivity.class);
-                        startActivity(intent);
-                        Log.v("test","--------");
+                        int id =menuItem.getItemId();
+                        switch (id){
+                            case R.id.nav_home: {
+                                Intent intent = new Intent(MainActivity.this, GuoDuActivity.class);
+                                startActivity(intent);
+                            }
+                                break;
+                            case R.id.nav_messages: {
+                                Intent intent = new Intent(MainActivity.this, TabelLayoutActivity.class);
+                                startActivity(intent);
+                            }
+                                break;
+                            case R.id.nav_friends:{
+                                Intent intent = new Intent(MainActivity.this, CollapsingToolbarActivity.class);
+                                startActivity(intent);
+                            }
+                            break;
+                        }
 
                         return true;
                     }
@@ -77,30 +88,6 @@ public class MainActivity extends AppCompatActivity {
                 mDrawerLayout, toolbar,R.string.open, R.string.close );
         mActionBarDrawerToggle.syncState();
         mDrawerLayout.setDrawerListener(mActionBarDrawerToggle);
-//        final TextInputLayout textInputLayout = (TextInputLayout) findViewById(R.id.til_pwd);
-//        EditText editText = textInputLayout.getEditText();
-//        textInputLayout.setHint("Password");
-//        assert editText != null;
-//        editText.addTextChangedListener(new TextWatcher() {
-//            @Override
-//            public void beforeTextChanged(CharSequence s, int start, int count, int after) {
-//                if (s.length() > 4) {
-//                    textInputLayout.setError("Password error");
-//                    textInputLayout.setErrorEnabled(true);
-//                } else {
-//                    textInputLayout.setErrorEnabled(false);
-//                }
-//            }
-//
-//            @Override
-//            public void onTextChanged(CharSequence s, int start, int before, int count) {
-//            }
-//
-//            @Override
-//            public void afterTextChanged(Editable s) {
-//            }
-//        });
-
 
     }
 
@@ -118,7 +105,6 @@ public class MainActivity extends AppCompatActivity {
                     {
                         menuItem.setChecked(true);
                         mDrawerLayout.closeDrawers();
-
                         return true;
                     }
                 });

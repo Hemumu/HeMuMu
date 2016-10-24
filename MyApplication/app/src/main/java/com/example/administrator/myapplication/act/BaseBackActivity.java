@@ -1,4 +1,4 @@
-package com.example.administrator.myapplication;
+package com.example.administrator.myapplication.act;
 
 import me.imid.swipebacklayout.lib.app.SwipeBackActivity;
 
